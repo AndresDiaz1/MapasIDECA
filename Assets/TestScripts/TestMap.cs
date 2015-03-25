@@ -185,19 +185,48 @@ public class TestMap : MonoBehaviour
 		
         layers.Add(osmLayer);
 
-		// create a WMS tile layer
-        WMSTileLayer wmsLayer = map.CreateLayer<WMSTileLayer>("WMS");
-        //wmsLayer.BaseURL = "http://129.206.228.72/cached/osm?"; // http://www.osm-wms.de : seems to be of very limited use
-        //wmsLayer.Layers = "osm_auto:all";
-        wmsLayer.BaseURL = "http://vmap0.tiles.osgeo.org/wms/vmap0";
-        wmsLayer.Layers = "basic";
-#if UNITY_3_0 || UNITY_3_1 || UNITY_3_2 || UNITY_3_3 || UNITY_3_4 || UNITY_3_5 || UNITY_3_6 || UNITY_3_7 || UNITY_3_8 || UNITY_3_9
-        wmsLayer.gameObject.SetActiveRecursively(false);
-#else
-		wmsLayer.gameObject.SetActive(false);
-#endif
 
-        layers.Add(wmsLayer);
+
+		// create a WMS tile layer
+		
+		WMSTileLayer wmsLayer2 = map.CreateLayer<WMSTileLayer>("WMS");
+		//wmsLayer.BaseURL = "http://129.206.228.72/cached/osm?"; // http://www.osm-wms.de : seems to be of very limited use
+		//wmsLayer.Layers = "osm_auto:all";
+		wmsLayer2.BaseURL = "http://mapas.catastrobogota.gov.co/arcgiswsh//Tematicas/SistemaMovilidad/MapServer/WMSServer?";
+		wmsLayer2.Layers = "9";
+		#if UNITY_3_0 || UNITY_3_1 || UNITY_3_2 || UNITY_3_3 || UNITY_3_4 || UNITY_3_5 || UNITY_3_6 || UNITY_3_7 || UNITY_3_8 || UNITY_3_9
+		wmsLayer.gameObject.SetActiveRecursively(false);
+		#else
+		wmsLayer2.gameObject.SetActive(true);
+		#endif
+		
+		layers.Add(wmsLayer2);
+		
+		
+		
+		
+		
+		WMSTileLayer wmsLayer = map.CreateLayer<WMSTileLayer>("WMS");
+		//wmsLayer.BaseURL = "http://129.206.228.72/cached/osm?"; // http://www.osm-wms.de : seems to be of very limited use
+		//wmsLayer.Layers = "osm_auto:all";
+		wmsLayer.BaseURL = "http://imagenes.catastrobogota.gov.co/arcgis/services/Ortho2010/MapServer/WMSServer?";
+		wmsLayer.Layers = "0";
+		#if UNITY_3_0 || UNITY_3_1 || UNITY_3_2 || UNITY_3_3 || UNITY_3_4 || UNITY_3_5 || UNITY_3_6 || UNITY_3_7 || UNITY_3_8 || UNITY_3_9
+		wmsLayer.gameObject.SetActiveRecursively(false);
+		#else
+		wmsLayer.gameObject.SetActive(true);
+		#endif
+		
+		layers.Add(wmsLayer);
+
+
+
+
+
+
+
+
+
 
 		// create a VirtualEarth tile layer
         VirtualEarthTileLayer virtualEarthLayer = map.CreateLayer<VirtualEarthTileLayer>("VirtualEarth");

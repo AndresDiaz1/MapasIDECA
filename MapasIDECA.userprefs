@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TestScripts\TestMap.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\UnitySlippyMap\Assets\TestScripts\TestMap.cs">
     <Files>
-      <File FileName="Assets\TestScripts\TestMap.cs" Line="28" Column="1" />
+      <File FileName="..\UnitySlippyMap\Assets\TestScripts\TestMap.cs" Line="219" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

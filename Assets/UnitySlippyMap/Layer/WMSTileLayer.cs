@@ -348,7 +348,7 @@ public class WMSTileLayer : WebTileLayer
 			*/
 
 			Debug.Log ("El formatyo es"+baseURL + (baseURL.EndsWith("?") ? "" : "?") + "SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=" + "0" + "&STYLES=&SRS=" + "CRS:84"+"&CRS=CRS:84" + "&BBOX=" + min[0] + "," + min[1] + "," + max[0] + "," + max[1] + "&WIDTH=" + Map.TileResolution + "&HEIGHT=" + Map.TileResolution + "&FORMAT=" + format);
-			return baseURL + (baseURL.EndsWith("?") ? "" : "?") + "SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=" + "0" + "&STYLES=&SRS=" + "CRS:84"+"&CRS=CRS:84" + "&BBOX=" + min[0] + "," + min[1] + "," + max[0] + "," + max[1] + "&WIDTH=" + Map.TileResolution + "&HEIGHT=" + Map.TileResolution + "&FORMAT=" + format;
+			return baseURL + (baseURL.EndsWith("?") ? "" : "?") + "SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=" + layers + "&STYLES=&SRS=" + "CRS:84"+"&CRS=CRS:84" + "&BBOX=" + min[0] + "," + min[1] + "," + max[0] + "," + max[1] + "&WIDTH=" + Map.TileResolution + "&HEIGHT=" + Map.TileResolution + "&FORMAT=" + format+"&TRANSPARENT=TRUE";
 
 	}
 	#endregion
