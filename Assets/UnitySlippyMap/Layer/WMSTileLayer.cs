@@ -342,7 +342,7 @@ public class WMSTileLayer : WebTileLayer
         double[] max = Map.EPSG900913ToWGS84Transform.Transform(new double[2] { tileMeters[0] + tileSize, tileMeters[1] }); //GeoHelpers.MetersToWGS84(xmax, ymax);
         
 
-			baseURL = "http://imagenes.catastrobogota.gov.co/arcgis/services/Ortho2010/MapServer/WMSServer?";
+			//baseURL = "http://imagenes.catastrobogota.gov.co/arcgis/services/Ortho2010/MapServer/WMSServer?";
 			/*Debug.Log ("La base URL es:"+baseURL + (baseURL.EndsWith("?") ? "" : "?") + "SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=" + "0" + "&STYLES="+"default"+"&CRS=" + "CRS:84" + "&BBOX=" + -74.317402 + "," +3.880865 + "," + -73.971223 + "," +4.837439 + "&WIDTH=" + Map.TileResolution + "&HEIGHT=" + Map.TileResolution + "&FORMAT=image/png32");
 			return baseURL + (baseURL.EndsWith("?") ? "" : "?") + "SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=" + "0" + "&STYLES=&CRS=" + "CRS:84" + "&BBOX=" + -74.317402 + "," +3.880865 + "," + -73.971223 + "," +4.837439 + "&WIDTH=" + Map.TileResolution + "&HEIGHT=" + Map.TileResolution + "&FORMAT=image/png32";
 			*/
